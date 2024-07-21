@@ -1,0 +1,12 @@
+Команды терминала для лекции 05
+
+docker run --name mynewdb -e POSTGRES_DB=mynewdb -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -d postgres --> создание контейнера
+
+docker exec -it mynewdb(название контейнера) psql -U myuser mynewdb --> запуск контейнера
+
+
+Далее терминал контейнера mynewdb=#
+
+\dt --> показывает список всех таблиц в текущей базе данных
+
+select * from users; --> вывести все записи из таблицы users
